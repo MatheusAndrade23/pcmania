@@ -1,6 +1,10 @@
-package br.inatel.pcmania;
+package br.inatel.pcmania.computador;
 
-class Computador {
+import br.inatel.pcmania.memoria_usb.MemoriaUSB;
+import br.inatel.pcmania.sistema_operacional.SistemaOperacional;
+import br.inatel.pcmania.hardware_basico.HardwareBasico;
+
+public class Computador {
   private String marca;
   private float preco;
 

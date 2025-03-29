@@ -1,6 +1,6 @@
-package br.inatel.pcmania;
+package br.inatel.pcmania.sistema_operacional;
 
-class SistemaOperacional{
+public class SistemaOperacional{
   private String nome;
   private int tipo;
 

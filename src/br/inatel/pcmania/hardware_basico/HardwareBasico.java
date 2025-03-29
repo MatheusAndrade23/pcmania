@@ -1,6 +1,6 @@
-package br.inatel.pcmania;
+package br.inatel.pcmania.hardware_basico;
 
-class HardwareBasico {
+public class HardwareBasico {
   private String nome;
   private float capacidade;
 

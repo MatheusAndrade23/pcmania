@@ -1,4 +1,6 @@
-package br.inatel.pcmania;
+package br.inatel.pcmania.cliente;
+
+import br.inatel.pcmania.computador.Computador;
 
 class Cliente {
   private String nome;
