@@ -1,3 +1,5 @@
+package br.inatel.pcmania;
+
 class Cliente {
   private String nome;
   private long cpf;

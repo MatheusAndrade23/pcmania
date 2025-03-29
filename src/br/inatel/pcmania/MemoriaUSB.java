@@ -1,3 +1,5 @@
+package br.inatel.pcmania;
+
 class MemoriaUSB {
   private String nome;
   private int capacidade;
