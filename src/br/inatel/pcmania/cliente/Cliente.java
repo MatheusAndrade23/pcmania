@@ -16,6 +16,28 @@ public class Cliente {
   }
 
   public float calculaTotalCompra(){
-    return 1;
+    float total = 0;
+
+    for (Computador computador : carrinho) {
+      total+= computador.getPreco();
+    }
+
+    return total;
+  }
+
+  public String getNome(){
+    return nome;
+  }
+
+  public long getCpf(){
+    return cpf;
+  }
+
+  public Computador[] getCarrinho(){
+    return carrinho;
+  }
+
+  public void setCarrinho(Computador[] novo_carrinho){
+    carrinho = novo_carrinho;
   }
 }

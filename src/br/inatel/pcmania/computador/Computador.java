@@ -1,8 +1,8 @@
 package br.inatel.pcmania.computador;
 
+import br.inatel.pcmania.hardware_basico.HardwareBasico;
 import br.inatel.pcmania.memoria_usb.MemoriaUSB;
 import br.inatel.pcmania.sistema_operacional.SistemaOperacional;
-import br.inatel.pcmania.hardware_basico.HardwareBasico;
 
 public class Computador {
   private String marca;
@@ -30,6 +30,10 @@ public class Computador {
     sistemaOperacional = new SistemaOperacional(nomeSistemaOperacional, tipoSistemaOperacional);
 
     memoriasUsb = new MemoriaUSB[1];
+  }
+
+  public float getPreco(){
+    return preco;
   }
 
   public void addMemoriaUSB(MemoriaUSB musb){
