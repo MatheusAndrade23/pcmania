@@ -37,9 +37,9 @@ public class Computador {
   }
 
   public void addMemoriaUSB(MemoriaUSB musb){
-    if(memoriasUsb.length == 1){
-      System.err.println("O PC já possui uma memória USB!");
-      return;
+    if (memoriasUsb[0] != null) {
+        System.err.println("O PC já possui uma memória USB!");
+        return;
     }
 
     memoriasUsb[1] = musb;
@@ -49,8 +49,8 @@ public class Computador {
     System.out.println("Informações Gerais: " + hardwareBasico.getNome() + " - Clock Processador: " + hardwareBasico.getCapacidade() + "Mhz");
     System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + " (" + sistemaOperacional.getTipo() + " bits)");
 
-    if(memoriasUsb.length == 1) {
-      System.out.println("Acompanha: Pen Drive " + memoriasUsb[1].getNome() + " " + memoriasUsb[1].getCapacidade());
+    if (memoriasUsb[0] != null) {
+        System.out.println("Acompanha: " + memoriasUsb[0].getNome() + " " + memoriasUsb[0].getCapacidade());
     }
   }
 }
