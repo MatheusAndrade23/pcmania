@@ -2,7 +2,7 @@ package br.inatel.pcmania.cliente;
 
 import br.inatel.pcmania.computador.Computador;
 
-class Cliente {
+public class Cliente {
   private String nome;
   private long cpf;
 
