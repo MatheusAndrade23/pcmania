@@ -65,12 +65,14 @@ public class Main {
               pc_promocao1.addMemoriaUSB(memoriaUsb);
 
               Computador[] carrinho = cliente.getCarrinho();
-
-              int numero_de_pcs_ja_adicionados = carrinho.length;
-
-              carrinho[numero_de_pcs_ja_adicionados] = pc_promocao1;
-
-              cliente.setCarrinho(carrinho);
+              Computador[] novoCarrinho = new Computador[carrinho.length + 1];
+    
+              for (int i = 0; i < carrinho.length; i++) {
+                novoCarrinho[i] = carrinho[i];
+              }
+  
+              novoCarrinho[carrinho.length] = pc_promocao1;
+              cliente.setCarrinho(novoCarrinho);
 
               System.out.println("Computador da promoção 1 adicionado ao carrinho!");
             }
@@ -91,12 +93,14 @@ public class Main {
               pc_promocao2.addMemoriaUSB(memoriaUsb);
 
               Computador[] carrinho = cliente.getCarrinho();
-
-              int numero_de_pcs_ja_adicionados = carrinho.length;
-
-              carrinho[numero_de_pcs_ja_adicionados] = pc_promocao2;
-
-              cliente.setCarrinho(carrinho);
+              Computador[] novoCarrinho = new Computador[carrinho.length + 1];
+    
+              for (int i = 0; i < carrinho.length; i++) {
+                novoCarrinho[i] = carrinho[i];
+              }
+  
+              novoCarrinho[carrinho.length] = pc_promocao2;
+              cliente.setCarrinho(novoCarrinho);
 
               System.out.println("Computador da promoção 2 adicionado ao carrinho!");
             }
@@ -117,12 +121,14 @@ public class Main {
               pc_promocao3.addMemoriaUSB(memoriaUsb);
 
               Computador[] carrinho = cliente.getCarrinho();
-
-              int numero_de_pcs_ja_adicionados = carrinho.length;
-
-              carrinho[numero_de_pcs_ja_adicionados] = pc_promocao3;
-
-              cliente.setCarrinho(carrinho);
+              Computador[] novoCarrinho = new Computador[carrinho.length + 1];
+    
+              for (int i = 0; i < carrinho.length; i++) {
+                novoCarrinho[i] = carrinho[i];
+              }
+  
+              novoCarrinho[carrinho.length] = pc_promocao3;
+              cliente.setCarrinho(novoCarrinho);
 
               System.out.println("Computador da promoção 3 adicionado ao carrinho!");
             }

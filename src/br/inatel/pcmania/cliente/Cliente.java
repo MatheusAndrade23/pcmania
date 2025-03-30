@@ -12,16 +12,16 @@ public class Cliente {
     this.nome = nome;
     this.cpf = cpf;
 
-    carrinho =  new Computador[10];
+    this.carrinho =  new Computador[0];
   }
 
-  public float calculaTotalCompra(){
+  public float calculaTotalCompra() {
     float total = 0;
-
     for (Computador computador : carrinho) {
-      total+= computador.getPreco();
+      if (computador != null) {
+        total += computador.getPreco();
+      }
     }
-
     return total;
   }
 
