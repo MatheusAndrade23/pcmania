@@ -42,7 +42,7 @@ public class Computador {
         return;
     }
 
-    memoriasUsb[1] = musb;
+    memoriasUsb[0] = musb;
   }
 
   public void mostraPCConfigs(){
