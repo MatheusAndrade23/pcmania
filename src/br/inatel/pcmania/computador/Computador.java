@@ -6,13 +6,13 @@ import br.inatel.pcmania.memoria_usb.MemoriaUSB;
 import br.inatel.pcmania.sistema_operacional.SistemaOperacional;
 
 public class Computador {
-  private String marca;
-  private float preco;
+  public String marca;
+  public float preco;
 
-  private MemoriaUSB[] memoriasUsb;
+  public MemoriaUSB[] memoriasUsb;
 
-  private SistemaOperacional sistemaOperacional;
-  private HardwareBasico[] hardwaresBasicos;
+  public SistemaOperacional sistemaOperacional;
+  public HardwareBasico[] hardwaresBasicos;
 
   public Computador(
     String marca, 
@@ -42,10 +42,6 @@ public class Computador {
     memoriasUsb = new MemoriaUSB[1];
   }
 
-  public float getPreco(){
-    return preco;
-  }
-
   public void addMemoriaUSB(MemoriaUSB musb){
     if (memoriasUsb[0] != null) {
         System.err.println("O PC já possui uma memória USB!");
@@ -58,21 +54,21 @@ public class Computador {
   public void mostraPCConfigs(){
     System.out.println("Informações Gerais");
     System.out.println("Marca: " + marca);
-    System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + "(" + sistemaOperacional.getTipo() + ")");
+    System.out.println("Sistema Operacional: " + sistemaOperacional.nome + "(" + sistemaOperacional.tipo+ ")");
     System.out.println("Preço: " + preco);
 
     HardwareBasico processador = hardwaresBasicos[0];
     HardwareBasico memoriaRam = hardwaresBasicos[1];
     HardwareBasico hd = hardwaresBasicos[2];
 
-    System.out.println("Processador: " + processador.getNome() + " - Capacidade: " + Formatadores.formatarMemoria(processador.getCapacidade()));
-    System.out.println(memoriaRam.getNome() + " - Capacidade: " + Formatadores.formatarMemoria(memoriaRam.getCapacidade()));
-    System.out.println(hd.getNome() + " - Capacidade: " + Formatadores.formatarMemoria(hd.getCapacidade()));
+    System.out.println("Processador: " + processador.nome + " - Capacidade: " + Formatadores.formatarMemoria(processador.capacidade));
+    System.out.println(memoriaRam.nome + " - Capacidade: " + Formatadores.formatarMemoria(memoriaRam.capacidade));
+    System.out.println(hd.nome + " - Capacidade: " + Formatadores.formatarMemoria(hd.capacidade));
 
-    System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + " (" + sistemaOperacional.getTipo() + " bits)");
+    System.out.println("Sistema Operacional: " + sistemaOperacional.nome + " (" + sistemaOperacional.tipo + " bits)");
 
     if (memoriasUsb[0] != null) {
-        System.out.println("Acompanha: " + memoriasUsb[0].getNome() + " " + Formatadores.formatarMemoria(memoriasUsb[0].getCapacidade()));
+        System.out.println("Acompanha: " + memoriasUsb[0].nome + " " + Formatadores.formatarMemoria(memoriasUsb[0].capacidade));
     }
   }
 }

@@ -91,7 +91,7 @@ public class Main {
               continuar = false;
             }
             case 1 -> {
-              Computador[] carrinho = cliente.getCarrinho();
+              Computador[] carrinho = cliente.carrinho;
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
     
               for (int i = 0; i < carrinho.length; i++) {
@@ -99,12 +99,12 @@ public class Main {
               }
   
               novoCarrinho[carrinho.length] = pc_promocao1;
-              cliente.setCarrinho(novoCarrinho);
+              cliente.carrinho = novoCarrinho;
 
               System.out.println("Computador da promoção 1 adicionado ao carrinho!");
             }
             case 2 -> {
-              Computador[] carrinho = cliente.getCarrinho();
+              Computador[] carrinho = cliente.carrinho;
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
     
               for (int i = 0; i < carrinho.length; i++) {
@@ -112,14 +112,14 @@ public class Main {
               }
   
               novoCarrinho[carrinho.length] = pc_promocao2;
-              cliente.setCarrinho(novoCarrinho);
+              cliente.carrinho = novoCarrinho;
 
               System.out.println("Computador da promoção 2 adicionado ao carrinho!");
             }
             case 3 -> {
               
 
-              Computador[] carrinho = cliente.getCarrinho();
+              Computador[] carrinho = cliente.carrinho;
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
     
               for (int i = 0; i < carrinho.length; i++) {
@@ -127,7 +127,7 @@ public class Main {
               }
   
               novoCarrinho[carrinho.length] = pc_promocao3;
-              cliente.setCarrinho(novoCarrinho);
+              cliente.carrinho = novoCarrinho;
 
               System.out.println("Computador da promoção 3 adicionado ao carrinho!");
             }
@@ -137,10 +137,10 @@ public class Main {
 
     System.out.println("======== Compra Encerrada ========");
 
-    System.out.println("Cliente: " + cliente.getNome() + " - CPF: " + cliente.getCpf());
+    System.out.println("Cliente: " + cliente.nome + " - CPF: " + cliente.cpf);
     System.out.println("Produtos:");
 
-    Computador[] carrinho = cliente.getCarrinho();
+    Computador[] carrinho = cliente.carrinho;
 
     for (Computador computador : carrinho) {
       System.out.println("");

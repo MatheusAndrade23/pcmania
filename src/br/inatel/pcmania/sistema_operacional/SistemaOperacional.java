@@ -1,19 +1,11 @@
 package br.inatel.pcmania.sistema_operacional;
 
 public class SistemaOperacional{
-  private String nome;
-  private int tipo;
+  public String nome;
+  public int tipo;
 
   public SistemaOperacional(String nome, int tipo){
     this.nome = nome;
     this.tipo = tipo;
-  }
-
-  public String getNome(){
-    return nome;
-  }
-
-  public int getTipo(){
-    return tipo;
   }
 }

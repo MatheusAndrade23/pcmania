@@ -3,10 +3,10 @@ package br.inatel.pcmania.cliente;
 import br.inatel.pcmania.computador.Computador;
 
 public class Cliente {
-  private String nome;
-  private long cpf;
+  public String nome;
+  public long cpf;
 
-  private Computador[] carrinho;
+  public Computador[] carrinho;
 
   public Cliente(String nome, long cpf){
     this.nome = nome;
@@ -19,25 +19,9 @@ public class Cliente {
     float total = 0;
     for (Computador computador : carrinho) {
       if (computador != null) {
-        total += computador.getPreco();
+        total += computador.preco;
       }
     }
     return total;
-  }
-
-  public String getNome(){
-    return nome;
-  }
-
-  public long getCpf(){
-    return cpf;
-  }
-
-  public Computador[] getCarrinho(){
-    return carrinho;
-  }
-
-  public void setCarrinho(Computador[] novo_carrinho){
-    carrinho = novo_carrinho;
   }
 }
