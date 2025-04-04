@@ -1,12 +1,15 @@
 package br.inatel.pcmania;
 
+import java.util.Scanner;
+
 import br.inatel.pcmania.cliente.Cliente;
 import br.inatel.pcmania.computador.Computador;
 import br.inatel.pcmania.memoria_usb.MemoriaUSB;
-import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
+
+    int MATRICULA = 355;
 
     System.out.println("=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=");
     System.out.println("         BEM-VINDO À PCMANIA        ");
@@ -20,9 +23,6 @@ public class Main {
     System.out.print("Digite seu CPF: ");
     String cpf = keyboard.nextLine();
         
-    System.out.print("Digite sua matrícula: ");
-    String matricula = keyboard.nextLine();
-
     Cliente cliente = new Cliente(nome, Long.parseLong(cpf));
 
     System.out.println("\nCadastro realizado com sucesso!");
@@ -51,7 +51,7 @@ public class Main {
             case 1 -> {
               Computador pc_promocao1 = new Computador(
                 "Apple",
-                Float.parseFloat(matricula), 
+                MATRICULA, 
                 "Pentium Core i3",
                 2200,
                 8,
@@ -79,7 +79,7 @@ public class Main {
             case 2 -> {
               Computador pc_promocao2 = new Computador(
                 "Samsung",
-                Float.parseFloat(matricula + 1234), 
+                MATRICULA + 1234, 
                 "Pentium Core i5",
                 3370,
                 16,
@@ -107,7 +107,7 @@ public class Main {
             case 3 -> {
               Computador pc_promocao3 = new Computador(
                 "Dell",
-                Float.parseFloat(matricula + 5678), 
+                MATRICULA + 5678, 
                 "Pentium Core i7",
                 4500,
                 32,
