@@ -72,7 +72,7 @@ public class Computador {
     System.out.println("Sistema Operacional: " + sistemaOperacional.getNome() + " (" + sistemaOperacional.getTipo() + " bits)");
 
     if (memoriasUsb[0] != null) {
-        System.out.println("Acompanha: " + memoriasUsb[0].getNome() + " " + memoriasUsb[0].getCapacidade());
+        System.out.println("Acompanha: " + memoriasUsb[0].getNome() + " " + Formatadores.formatarMemoria(memoriasUsb[0].getCapacidade()));
     }
   }
 }
