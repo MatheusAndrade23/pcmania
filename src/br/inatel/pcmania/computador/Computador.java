@@ -55,7 +55,7 @@ public class Computador {
     System.out.println("Informações Gerais");
     System.out.println("Marca: " + marca);
     System.out.println("Sistema Operacional: " + sistemaOperacional.nome + "(" + sistemaOperacional.tipo+ ")");
-    System.out.println("Preço: " + preco);
+    System.out.println("Preço: " + preco + " R$");
 
     HardwareBasico processador = hardwaresBasicos[0];
     HardwareBasico memoriaRam = hardwaresBasicos[1];
