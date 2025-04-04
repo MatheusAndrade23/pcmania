@@ -11,6 +11,48 @@ public class Main {
 
     int MATRICULA = 355;
 
+    Computador pc_promocao1 = new Computador(
+      "Apple",
+      MATRICULA, 
+      "Pentium Core i3",
+      2200,
+      8,
+      500,
+      "Linux Ubuntu",
+      32
+    );
+
+    MemoriaUSB memoriaUsb1 = new MemoriaUSB("Pen drive", 16);
+    pc_promocao1.addMemoriaUSB(memoriaUsb1);
+
+    Computador pc_promocao2 = new Computador(
+      "Samsung",
+      MATRICULA + 1234, 
+      "Pentium Core i5",
+      3370,
+      16,
+      1000,
+      "Windows 8",
+      64
+    );
+
+    MemoriaUSB memoriaUsb2 = new MemoriaUSB("Pen drive", 32);
+    pc_promocao2.addMemoriaUSB(memoriaUsb2);
+
+    Computador pc_promocao3 = new Computador(
+      "Dell",
+      MATRICULA + 5678, 
+      "Pentium Core i7",
+      4500,
+      32,
+      2000,
+      "Windows 10",
+      64
+    );
+
+    MemoriaUSB memoriaUsb3 = new MemoriaUSB("Pen drive", 1000);
+    pc_promocao3.addMemoriaUSB(memoriaUsb3);
+
     System.out.println("=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=");
     System.out.println("         BEM-VINDO À PCMANIA        ");
     System.out.println("=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=");
@@ -49,21 +91,6 @@ public class Main {
               continuar = false;
             }
             case 1 -> {
-              Computador pc_promocao1 = new Computador(
-                "Apple",
-                MATRICULA, 
-                "Pentium Core i3",
-                2200,
-                8,
-                500,
-                "Linux Ubuntu",
-                32
-              );
-
-              MemoriaUSB memoriaUsb = new MemoriaUSB("Pen drive", 16);
-
-              pc_promocao1.addMemoriaUSB(memoriaUsb);
-
               Computador[] carrinho = cliente.getCarrinho();
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
     
@@ -77,21 +104,6 @@ public class Main {
               System.out.println("Computador da promoção 1 adicionado ao carrinho!");
             }
             case 2 -> {
-              Computador pc_promocao2 = new Computador(
-                "Samsung",
-                MATRICULA + 1234, 
-                "Pentium Core i5",
-                3370,
-                16,
-                1000,
-                "Windows 8",
-                64
-              );
-
-              MemoriaUSB memoriaUsb = new MemoriaUSB("Pen drive", 32);
-
-              pc_promocao2.addMemoriaUSB(memoriaUsb);
-
               Computador[] carrinho = cliente.getCarrinho();
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
     
@@ -105,20 +117,7 @@ public class Main {
               System.out.println("Computador da promoção 2 adicionado ao carrinho!");
             }
             case 3 -> {
-              Computador pc_promocao3 = new Computador(
-                "Dell",
-                MATRICULA + 5678, 
-                "Pentium Core i7",
-                4500,
-                32,
-                2000,
-                "Windows 10",
-                64
-              );
-
-              MemoriaUSB memoriaUsb = new MemoriaUSB("Pen drive", 1000);
-
-              pc_promocao3.addMemoriaUSB(memoriaUsb);
+              
 
               Computador[] carrinho = cliente.getCarrinho();
               Computador[] novoCarrinho = new Computador[carrinho.length + 1];
