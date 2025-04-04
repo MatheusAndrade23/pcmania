@@ -144,9 +144,11 @@ public class Main {
     Computador[] carrinho = cliente.getCarrinho();
 
     for (Computador computador : carrinho) {
+      System.out.println("");
       computador.mostraPCConfigs();
     }
 
+    System.out.println("------------");
     System.out.println("Total da Compra: " + cliente.calculaTotalCompra() + " R$");
 
     keyboard.close();
