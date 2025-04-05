@@ -50,7 +50,7 @@ public class Main {
       64
     );
 
-    MemoriaUSB memoriaUsb3 = new MemoriaUSB("Pen drive", 1000);
+    MemoriaUSB memoriaUsb3 = new MemoriaUSB("HD Externo", 1000);
     pc_promocao3.addMemoriaUSB(memoriaUsb3);
 
     System.out.println("=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=");
